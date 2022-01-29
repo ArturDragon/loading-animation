@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #111314;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loading{
+    width: 120px;
+    height: 120px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border-top: 10px solid #e74c3c;
+    position: absolute;
+    animation: anime 2s linear infinite;
+}
+.loading::before, .loading::after{
+
+    content: '';
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+.loading::before{
+    border-top: 10px solid #e67e22;
+    transform: rotate(120deg);
+    animation: clr 2s linear infinite;
+}
+.loading::after{
+    border-top: 10px solid #3498db;
+    transform: rotate(240deg);
+    animation: clr2 2s linear infinite;
+}
+.loading2{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    animation-delay: 1s;
+}
+.loading2::before, .loading2::after{
+    width: 80px;
+    height: 80px;
+}
+.loading3{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+.loading3::before, .loading3::after{
+    width: 40px;
+    height: 40px;
+}
+h2{
+    position: relative;
+    transform: translateY(90px);
+}
+
+h2 span{
+    animation: clr3 2s linear infinite;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+h2 span:nth-child(2){animation-delay: .1s;}
+h2 span:nth-child(3){animation-delay: .2s;}
+h2 span:nth-child(4){animation-delay: .3s;}
+h2 span:nth-child(5){animation-delay: .4s;}
+h2 span:nth-child(6){animation-delay: .5s;}
+h2 span:nth-child(7){animation-delay: .6s;}
+
+@keyframes anime {
+    to{transform: rotate(360deg);}
+    0%{border-top: 10px solid #e74c3c;}
+    50%{border-top: 10px solid #0b488d;}
+    75%{border-top: 10px solid #800a6c;}
+    100%{border-top: 10px solid #e74c3c;}
+}
+@keyframes clr {
+    0%{border-top: 10px solid #e67e22;}
+    50%{border-top: 10px solid #c5c20b;}
+    75%{border-top: 10px solid #0a8037;}
+    100%{border-top: 10px solid #e67e22;}}
+@keyframes clr2 {
+    0%{border-top: 10px solid #3498db;}
+    50%{border-top: 10px solid #a1151a;}
+    75%{border-top: 10px solid #62aac0;}
+    100%{border-top: 10px solid #3498db;}}
+@keyframes clr3 {
+    0%{color:  #e67e22;}
+    25%{color:  #a1151a;}
+    50%{color:  #c5c20b;}
+    75%{color:  #0a8037;}
+    100%{color:  #e67e22;}
+}
